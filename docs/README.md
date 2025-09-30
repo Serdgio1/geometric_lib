@@ -10,6 +10,7 @@ This library provides functions to calculate areas and perimeters for basic geom
   - Circle
   - Rectangle
   - Square
+  - Triangle
 - Simple Python API
 - Accurate mathematical formulas
 
