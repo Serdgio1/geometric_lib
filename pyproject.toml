@@ -1,0 +1,30 @@
+name = "geometric_lib"
+version = "1.0.0"
+python_version = "3.11"
+
+[tool.black]
+line-length = 127
+target-version = ['py38', 'py39', 'py310']
+exclude = '''
+/(
+    \.git 
+    | __pycache__
+    | venv
+)/
+'''
+
+[tool.coverage.run]
+source = ["."]
+omit = ["test_*.py", "venv/*"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["."]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+addopts = "--cov=. --cov-report=term-missing --cov-report=html"
